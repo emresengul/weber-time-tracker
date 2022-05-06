@@ -1,0 +1,27 @@
+{
+    "name": "Weber: Simple Web Activity Time Tracker",
+    "description": "Simple, modern web activity tracker. Just downloand the extension and track your history!",
+    "version": "1.0",
+    "manifest_version": 2,
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage",
+        "idle",
+        "chrome://favicon/*",
+        "webNavigation",
+        "unlimitedStorage"
+    ],
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": [
+            "scripts/website.js",
+            "scripts/storage.js",
+            "scripts/process.js",
+            "scripts/background.js"
+        ],
+        "persistent": false
+    }
+}

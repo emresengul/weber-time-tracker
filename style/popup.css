@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+html {
+    font-family: sans-serif;
+
+}
+#weber-extension {
+    min-height: 125px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    background-color: red;
+    width: 500px;
+    height: 350px;
+}
+.weber-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    background-color: aliceblue;
+    height: 100%;
+    width: 100%;
+}
+.weber-content .weber-title {
+    color: #626262;
+    font-weight: 700;
+}
+.weber-websites {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    overflow-y: auto;
+    width: 100%;
+    padding: 16px 10px;
+}
+.weber-websites .weber-website {
+    width: 100%;
+    height: 100px;
+    background-color: #F0F0F0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 8px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 4px;
+}
+.weber-websites .weber-website .weber-website-icon{
+    width: 50px;
+    height: 50px;
+    background-color: #C4C4C4;
+    border-radius: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+}
+.weber-websites .weber-website .weber-website-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.weber-websites .weber-website .weber-info{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 8px;
+}
+.weber-websites .weber-website .weber-info .weber-website-info-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.weber-websites .weber-website .weber-info .weber-website-info-item .weber-website-info-value{
+    font-size: 18px;
+    color: #000;
+    margin-top: 5px;
+}
+.weber-websites .weber-website .weber-info .weber-website-info-item .weber-website-info-key{
+    font-size: 14px;
+    color: #000;
+
+}
+.weber-websites .weber-website .weber-website-order{
+    width: 22px;
+    height: 22px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #000;
+    background-color: #5DCE68;
+    position: absolute;
+    left: 0;
+    top:-10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-8deg);
+}
