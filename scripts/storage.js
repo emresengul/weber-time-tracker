@@ -4,24 +4,29 @@ class Storage {
         });
     }
     async add(tab){
-        let website = new Website()
-        website = website.create(tab)
-        if(!website){
-            return null
-        }
-        let storageData = await this.get('weberTabs')
-        if(!storageData) {
-            storageData = []
-            storageData.push(website)
-        }
-        else {
-            storageData = JSON.parse(storageData)
-            const index = storageData.findIndex((d) => d.url == website.url)
-            if(index === -1) {
+        try {
+            let website = new Website()
+            website = website.create(tab)
+            if(!website){
+                return null
+            }
+            let storageData = await this.get('weberTabs')
+            if(!storageData) {
+                storageData = []
                 storageData.push(website)
             }
+            else {
+                storageData = JSON.parse(storageData)
+                const index = storageData.findIndex((d) => d.url == website.url)
+                if(index === -1) {
+                    storageData.push(website)
+                }
+            }
+            this.set('weberTabs',JSON.stringify(storageData))
         }
-        this.set('weberTabs',JSON.stringify(storageData))
+        catch{
+        }
+
     }
     async update(tab) {
         let website = new Website()

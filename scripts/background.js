@@ -1,5 +1,6 @@
-var storage = new Storage()
 var process = new Process()
+var storage = new Storage()
+
 const inital = function() {
     events()
 }
@@ -22,6 +23,7 @@ const events = function(){
     chrome.webNavigation.onCompleted.addListener(function(details) {
         chrome.tabs.get(details.tabId, function(tab) {
             storage.update(tab)
+            process.setActiveTab(tab)
         });
     });
     chrome.tabs.onRemoved.addListener(async function(tabId,removed) {
